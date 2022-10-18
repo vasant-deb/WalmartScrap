@@ -16,6 +16,8 @@ from flask import jsonify
 from selenium.webdriver.firefox.options import Options
 import json
 
+
+
 app = Flask(__name__)
 prices_list = []
 products_list = []
@@ -36,7 +38,7 @@ def getalldata(url,check):
      print(url)
      options = Options()
      options.headless = True
-     driver = webdriver.Firefox(options=options, executable_path=r'/app/geckodriver.exe')
+     driver = webdriver.Firefox(options=options, executable_path='./geckodriver.exe')
      driver.fullscreen_window()
      driver.delete_all_cookies()
      driver.get(url)
