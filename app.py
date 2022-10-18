@@ -28,9 +28,10 @@ function6_success = False
 function7_success = False
 function8_success = False
 
-# @app.route('/')
-# def hello_world():
-#     return 'Hello World!'
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
 def getalldata(url,check):
      print(url)
      options = Options()
@@ -105,7 +106,7 @@ def getalldata(url,check):
 
      return 'success'
    
-@app.route('/')
+@app.route('/grocery')
 def getdata():
     getalldata('https://www.walmart.ca/browse/grocery/fruits-vegetables/10019-6000194327370?icid=grocery_wm_OGL1_LMagCategory_Tile_Fruits_Veg&p=1','false')  
     function1_success = True
