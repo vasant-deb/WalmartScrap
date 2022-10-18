@@ -36,7 +36,7 @@ def getalldata(url,check):
      print(url)
      options = Options()
      options.headless = True
-     driver = webdriver.Firefox(options=options, executable_path='geckodriver.exe')
+     driver = webdriver.Firefox(options=options, executable_path='/app/geckodriver.exe')
      driver.fullscreen_window()
      driver.delete_all_cookies()
      driver.get(url)
